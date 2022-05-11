@@ -100,8 +100,9 @@ class TestingClasses {
         try {
             JAXBAPI.addFromJson("files/in.json", getSession());
             JAXBAPI.dumpToJson("files/out.json", getSession(), "400");
-            JAXBAPI.executeXML("files/5.xml", getSession());
-        } catch (IOException | JAXBException e) {
+            //JAXBAPI.executeXML("files/5.xml", getSession());
+        //} catch (IOException | JAXBException e) {
+        } catch (IOException e) {
             fail();
         }
     }

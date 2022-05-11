@@ -76,6 +76,7 @@ class JAXBAPI {
     }
 
     static void addFromJson(@SuppressWarnings("SameParameterValue") String filename, Session session) throws IOException {
+        //Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd").setPrettyPrinting().create();
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         try (Reader reader = new FileReader(filename)) {
             PersonEntity personEntity = gson.fromJson(reader, PersonEntity.class);
